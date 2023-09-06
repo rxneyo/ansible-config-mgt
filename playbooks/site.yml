@@ -16,13 +16,13 @@
 
  
 
-# - name: include env-vars file
+- name: include env-vars file
 
-#   import_playbook: ../dynamic-assignments/env-vars.yml
+  import_playbook: ../dynamic-assignments/env-vars.yml
 
-#   tags:
+  tags:
 
-#     - always
+    - always
 
  
 
