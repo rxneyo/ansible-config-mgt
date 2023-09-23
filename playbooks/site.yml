@@ -26,9 +26,9 @@
 
  
 
-# - name: import database file
+- name: import database file
 
-#   import_playbook: ../static-assignments/database.yml
+  import_playbook: ../static-assignments/database.yml
 
  
 
