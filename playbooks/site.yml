@@ -35,7 +35,7 @@
   hosts: artifactory
   tasks:
     - name: Include Artifactory Playbook
-      ansible.builtin.import_playbook: ../static-assignments/artifactory.yml
+      include_playbook: ../static-assignments/artifactory.yml
 
  
 
