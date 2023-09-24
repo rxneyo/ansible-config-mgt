@@ -7,7 +7,7 @@ Nginx-Private-IP-Address
 [sonarqube]
 Sonarqube-Private-IP-Address
 
-[artifactory-repository]
+[artifactory]
 172.31.84.101 ansible_ssh_user='ec2-user'
 
 [db]
