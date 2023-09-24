@@ -31,11 +31,9 @@
 #   import_playbook: ../static-assignments/database.yml
 
 
-- name: Artifactory Assignment
-  hosts: artifactory
-  tasks:
-    - name: Include Artifactory Playbook
-      include_playbook: ../static-assignments/artifactory.yml
+  - name: Artifactory Assignment
+
+    import_playbook: ../static-assignments/artifactory.yml
 
  
 
