@@ -1,8 +1,2 @@
 ---
 # defaults file for artifactory
-
----
-- hosts: artifactory
-  roles:
-     - artifactory
-  become: true
