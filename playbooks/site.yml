@@ -33,7 +33,7 @@
 
   - name: artifactory
 
-    include_playbook: ../static-assignments/artifactory.yml
+    import_playbook: ../static-assignments/artifactory.yml
 
  
 
