@@ -1,7 +1,5 @@
 ---
 # tasks file for artifactory
----
-# defaults file for artifactory
 
 - name: Install Java 11
   ansible.builtin.yum:
@@ -17,7 +15,7 @@
 
 - name: Configure Java Path
   ansible.builtin.template:
-    src: templates/bash-profile.j2  # Ensure this template exists
+    src: templates/bash-profile.j2
     dest: ~/.bash_profile
 
 - name: Reload the /etc/profile
