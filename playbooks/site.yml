@@ -31,9 +31,9 @@
 #   import_playbook: ../static-assignments/database.yml
 
 
-  - name: artifactory
+- name: Import Artifactory Playbook
 
-    import_playbook: ../static-assignments/artifactory.yml
+  import_playbook: ../static-assignments/artifactory.yml
 
  
 
