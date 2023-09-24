@@ -1,14 +1,24 @@
----
+# ---
 
-# - name: Include dynamic variables
+# # - name: Include dynamic variables
 
-#   hosts: uat-webservers
+# #   hosts: uat-webservers
 
  
 
-# # - name: import common file
+# # # - name: import common file
 
-# #   import_playbook: ../static-assignments/common.yml
+# # #   import_playbook: ../static-assignments/common.yml
+
+# # #   tags:
+
+# # #     - always
+
+ 
+
+# # - name: include env-vars file
+
+# #   import_playbook: ../dynamic-assignments/env-vars.yml
 
 # #   tags:
 
@@ -16,31 +26,28 @@
 
  
 
-# - name: include env-vars file
+# - name: import database file
 
-#   import_playbook: ../dynamic-assignments/env-vars.yml
+#   import_playbook: ../static-assignments/database.yml
 
-#   tags:
 
-#     - always
-
- 
-
-- name: import database file
-
-  import_playbook: ../static-assignments/database.yml
+- name: Artifactory Assignment
+  hosts: artifactory
+  tasks:
+    - name: Include Artifactory Playbook
+      ansible.builtin.import_playbook: ../static-assignments/artifactory.yml
 
  
 
-# # - name: import webservers file
+# # # - name: import webservers file
 
-# #   import_playbook: ../static-assignments/uat-webservers.yml
+# # #   import_playbook: ../static-assignments/uat-webservers.yml
 
  
 
-# - name: import Loadbalancers assignment
+# # - name: import Loadbalancers assignment
 
-#   import_playbook: ../static-assignments/loadbalancers.yml
+# #   import_playbook: ../static-assignments/loadbalancers.yml
 
-#   when: load_balancer_is_required
+# #   when: load_balancer_is_required
 
