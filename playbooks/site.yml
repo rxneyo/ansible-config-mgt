@@ -30,10 +30,14 @@
 
   import_playbook: ../static-assignments/database.yml
 
+  hosts: db
+
 
 - name: Import Artifactory Playbook
 
   import_playbook: ../static-assignments/artifactory.yml
+
+  hosts: artifactory
 
  
 
