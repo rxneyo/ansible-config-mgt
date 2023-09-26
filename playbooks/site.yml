@@ -32,10 +32,10 @@
 #   import_playbook: ../static-assignments/database.yml
   
 
-- hosts: artifactory
-- name: Import Artifactory Playbook
+# - hosts: artifactory
+# - name: Import Artifactory Playbook
 
-  import_playbook: ../static-assignments/artifactory.yml
+#   import_playbook: ../static-assignments/artifactory.yml
 
  
 
@@ -51,3 +51,13 @@
 
 # #   when: load_balancer_is_required
 
+
+---
+- hosts: db
+- name: database assignment
+  ansible.builtin.import_playbook: ../static-assignments/database.yml
+ 
+
+- hosts: artifactory
+- name: artifactory assignment
+  ansible.builtin.import_playbook: ../static-assignments/artifactory.yml
