@@ -26,10 +26,10 @@
 
  
 ---
-- hosts: db
-- name: import database file
+# - hosts: db
+# - name: import database file
 
-  import_playbook: ../static-assignments/database.yml
+#   import_playbook: ../static-assignments/database.yml
   
 
 - hosts: artifactory
