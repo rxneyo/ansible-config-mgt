@@ -25,12 +25,12 @@
     dest: /etc/yum.repos.d/jfrog-artifactory-rpms.repo
     mode: '0755'
 
-- name: Copy the Downloaded File to the etc Repo
-  ansible.builtin.copy:
-    src: /home/ec2-user/jfrog-artifactory-rpms.repo
-    dest: /etc/yum.repos.d/jfrog-artifactory-rpms.repo
-    remote_src: yes
-    follow: yes
+# - name: Copy the Downloaded File to the etc Repo
+#   ansible.builtin.copy:
+#     src: /home/ec2-user/jfrog-artifactory-rpms.repo
+#     dest: /etc/yum.repos.d/jfrog-artifactory-rpms.repo
+#     remote_src: yes
+#     follow: yes
 
 - name: Update Package Cache
   ansible.builtin.yum:
