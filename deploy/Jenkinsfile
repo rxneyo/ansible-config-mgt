@@ -34,9 +34,13 @@ pipeline {
 
       stage('Run Ansible playbook') {
     steps {
-        ansiblePlaybook become: true, colorized: true, credentialsId: 'key-pair', disableHostKeyChecking: true, installation: 'ansible', inventory: 'inventory/dev', playbook: 'playbooks/site.yml'
+        script {
+            def ansibleExecutable = "/usr/bin/ansible/ansible-playbook"
+            sh "${ansibleExecutable} playbooks/site.yml -i inventory/dev -b --become-user root --private-key /var/lib/jenkins/workspace/ansible-config-mgt_main/ssh39098367711967853.key -u ec2-user"
+        }
     }
 }
+
 
 
       stage('Clean Workspace after build') {
